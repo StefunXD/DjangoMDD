@@ -1,0 +1,9 @@
+{% if lastest_question_list %}
+<ul>
+    {% for questions in lastest_question_list %}
+    <li><a href="/similar/{{ questions.id }}/">{{ questions.similar_question }}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Pas de questions</p>
+{% endif %}

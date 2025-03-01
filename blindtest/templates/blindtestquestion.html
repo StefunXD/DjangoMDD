@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blind Test musical</title>
+</head>
+<body>
+    <h1>Triè par {{ question.question_type }}</h1>
+    <p>{{ question.blindtest_text }}</p>
+    <ul>
+        {% for choice in question.choices %}
+        <li> {{ choice }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
