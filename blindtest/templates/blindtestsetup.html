@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Créer votre blindtest</h2>
+    <form action="">
+        <label for="label_blindtestsettings">Selectionner vos options:</label>
+        <select id="id_blindtestsettings" name="blindtestsettings"> 
+            {% for type in question_types %}
+            <option value="{{ type.value }}"> {{ type.name }}
+                {% endfor %}
+            {% comment %} <option value="blindtest_general" name={{ questionType.GENERAL }}>{{ questionType.GENERAL }}</option>
+            <option value="blindtest_genre">Genre</option>
+            <option value="blindtest_artiste">Artiste</option> {% endcomment %}
+       </select>
+       <input type="number" id="blindtest_number" name="blindtestquestion_number" value="value_blintest_number" min="1" max="20">
+       <input type="submit">
+    </form>
+</body>
+</html>

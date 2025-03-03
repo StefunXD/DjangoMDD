@@ -6,10 +6,10 @@
 </head>
 <body>
     <h1>Triè par {{ question.question_type }}</h1>
-    <p>{{ question.blindtest_text }}</p>
+    <p>Quel est le titre de la chanson ? </p>
     <ul>
-        {% for choice in question.choices %}
-        <li> {{ choice }}</li>
+        {% for choice in choices %}
+        <li><a href="/blindtest/{{ choice.id }}">{{ choice }}</li>
         {% endfor %}
     </ul>
 </body>
